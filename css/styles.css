@@ -913,23 +913,19 @@ body.dark-mode .stats {
 }
 
 /* ===================================
-   Testimonials Carousel
+   Testimonials Section
    =================================== */
-.testimonials-carousel-container {
-    overflow: hidden;
-    position: relative;
-    padding: 20px 0;
+.testimonials {
+    background: var(--color-light);
 }
 
-.testimonials-track {
-    display: flex;
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: var(--spacing-md);
-    transition: transform 0.5s ease-in-out;
-    width: max-content;
 }
 
 .testimonial-card {
-    flex: 0 0 400px;
     background: var(--color-white);
     padding: var(--spacing-md);
     border-radius: var(--radius-lg);

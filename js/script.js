@@ -186,39 +186,6 @@ faqQuestions.forEach(question => {
 });
 
 // ===================================
-// Testimonials Carousel
-// ===================================
-const testimonialsTrack = document.getElementById('testimonialsTrack');
-if (testimonialsTrack) {
-    const cards = Array.from(testimonialsTrack.children);
-
-    // Clone cards for infinite effect
-    cards.forEach(card => {
-        const clone = card.cloneNode(true);
-        testimonialsTrack.appendChild(clone);
-    });
-
-    let position = 0;
-    const speed = 0.5; // Adjusted speed for better readability
-
-    function animateCarousel() {
-        position -= speed;
-
-        // Reset position when half the track (the original set) has passed
-        const trackWidth = testimonialsTrack.scrollWidth / 2;
-        if (Math.abs(position) >= trackWidth) {
-            position = 0;
-        }
-
-        testimonialsTrack.style.transform = `translateX(${position}px)`;
-        requestAnimationFrame(animateCarousel);
-    }
-
-    // Start animation
-    animateCarousel();
-}
-
-// ===================================
 // Contact Form Handling
 // ===================================
 const contactForm = document.getElementById('contactForm');
